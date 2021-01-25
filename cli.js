@@ -37,7 +37,6 @@ async function main() {
         }) + "\n\n"
       );
     });
-    simpleGit.add(`${appDir}/MySQL/AllProcedures.sql`);
     promises = [];
     const originalIndexJSON = JSON.parse(
       fs.readFileSync(renamePath("Express/proceduresMethods/index.json"))
@@ -102,6 +101,7 @@ async function main() {
                 )
               );
               simpleGit.add(`${appDir}/Express/proceduresMethods/index.json`);
+              simpleGit.add(`${appDir}/MySQL/AllProcedures.sql`);
               resolve();
             }
           );
